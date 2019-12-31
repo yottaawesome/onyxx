@@ -30,3 +30,17 @@
 *.exe
 *.out
 *.app
+
+*.opendb
+
+.vs/
+bin/
+obj/
+x64/
+x32/
+*.aps
+*.suo
+*.user
+*.filters
+Debug/
+Release/
