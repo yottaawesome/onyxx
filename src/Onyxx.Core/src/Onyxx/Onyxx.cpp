@@ -1,5 +1,5 @@
-#include "pch.h"
-#include "../../include/Onyxx.Core.h"
+#include "pch.hpp"
+#include "../../include/Onyxx.Core.hpp"
 
 namespace Onyxx
 {
