@@ -29,7 +29,7 @@ namespace Onyxx::Core::Window
         return RegisterClassExW(&wcex);
     }
 
-    HWND InitWindow(HINSTANCE hInstance, int nCmdShow)
+    HWND InitMainWindow(HINSTANCE hInstance)
     {
         HWND hWnd = CreateWindowExW(
             0,
@@ -48,11 +48,12 @@ namespace Onyxx::Core::Window
         if (hWnd == nullptr)
         {
             std::wcout << L"Failed to create main window" << std::endl;
-            return nullptr;
         }
-
-        ShowWindow(hWnd, SW_SHOWNORMAL);
-        UpdateWindow(hWnd);
+        else
+        {
+            ShowWindow(hWnd, SW_SHOWNORMAL);
+            UpdateWindow(hWnd);
+        }
 
         return hWnd;
     }

@@ -3,7 +3,7 @@
 #include "Onyxx.Core/include/Window.hpp"
 
 typedef ATOM(*RegisterWindowClassPtr)(HINSTANCE hInstance);
-typedef HWND(*InitWindowPtr)(HINSTANCE hInstance, int show);
+typedef HWND(*InitWindowPtr)(HINSTANCE hInstance);
 
 int main(int argc, char** args)
 {
@@ -15,27 +15,34 @@ int main(int argc, char** args)
         return 1;
     }
     
-    RegisterWindowClassPtr regType = (RegisterWindowClassPtr)GetProcAddress(coreDll, "RegisterWindowClass");
-    InitWindowPtr initType = (InitWindowPtr) GetProcAddress(coreDll, "InitWindow");
+    RegisterWindowClassPtr OnyxxRegisterWindowClass = (RegisterWindowClassPtr)GetProcAddress(coreDll, "RegisterWindowClass");
+    InitWindowPtr OnyxxInitMainWindow = (InitWindowPtr)GetProcAddress(coreDll, "InitMainWindow");
 
-    if (regType == nullptr)
+    if (OnyxxRegisterWindowClass == nullptr)
     {
         std::wcout << L"Failed to load RegisterWindowClass function" << std::endl;
         return 1;
     }
-    if (initType == nullptr)
+    if (OnyxxInitMainWindow == nullptr)
     {
         std::wcout << L"Failed to load InitWindow function" << std::endl;
         return 1;
     }
 
-    regType(GetModuleHandleW(nullptr));
-    initType(GetModuleHandleW(nullptr), 0);
+    OnyxxRegisterWindowClass(GetModuleHandleW(nullptr));
+    OnyxxInitMainWindow(GetModuleHandleW(nullptr));
 
-    Sleep(3000);
+    MSG msg;
 
-    //FreeLibrary(coreDll);
+    // Main message loop:
+    while (GetMessageW(&msg, nullptr, 0, 0))
+    {
+        TranslateMessage(&msg);
+        DispatchMessageW(&msg);
+    }
 
-    return 0;
+    FreeLibrary(coreDll);
+
+    return (int)msg.wParam;
 }
 
