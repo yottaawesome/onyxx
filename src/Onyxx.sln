@@ -10,6 +10,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Onyxx.Runtime", "Onyxx.Runt
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Onyxx.Core", "Onyxx.Core\Onyxx.Core.vcxproj", "{00629EE3-4730-436C-85ED-000DA782D99A}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Onyxx.Shared", "Onyxx.Shared\Onyxx.Shared.vcxproj", "{C4271597-40A0-47AB-8F16-D8F3574A8FE4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -34,6 +36,14 @@ Global
 		{00629EE3-4730-436C-85ED-000DA782D99A}.Release|x64.Build.0 = Release|x64
 		{00629EE3-4730-436C-85ED-000DA782D99A}.Release|x86.ActiveCfg = Release|Win32
 		{00629EE3-4730-436C-85ED-000DA782D99A}.Release|x86.Build.0 = Release|Win32
+		{C4271597-40A0-47AB-8F16-D8F3574A8FE4}.Debug|x64.ActiveCfg = Debug|x64
+		{C4271597-40A0-47AB-8F16-D8F3574A8FE4}.Debug|x64.Build.0 = Debug|x64
+		{C4271597-40A0-47AB-8F16-D8F3574A8FE4}.Debug|x86.ActiveCfg = Debug|Win32
+		{C4271597-40A0-47AB-8F16-D8F3574A8FE4}.Debug|x86.Build.0 = Debug|Win32
+		{C4271597-40A0-47AB-8F16-D8F3574A8FE4}.Release|x64.ActiveCfg = Release|x64
+		{C4271597-40A0-47AB-8F16-D8F3574A8FE4}.Release|x64.Build.0 = Release|x64
+		{C4271597-40A0-47AB-8F16-D8F3574A8FE4}.Release|x86.ActiveCfg = Release|Win32
+		{C4271597-40A0-47AB-8F16-D8F3574A8FE4}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
