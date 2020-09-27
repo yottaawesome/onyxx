@@ -1,5 +1,5 @@
 #pragma once
-#include "Macros.hpp"
+#include "../Macros.hpp"
 #include <Windows.h>
 
 namespace Onyxx::Core::Window

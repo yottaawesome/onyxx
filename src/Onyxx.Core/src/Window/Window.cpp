@@ -1,7 +1,7 @@
 #include "pch.hpp"
 #include <iostream>
 #include <string>
-#include "include/Window.hpp"
+#include "include/Window/Window.hpp"
 
 namespace Onyxx::Core::Window
 {

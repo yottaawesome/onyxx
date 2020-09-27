@@ -155,13 +155,16 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="include\D2D\D2D.hpp" />
+    <ClInclude Include="include\D3D\D3D.hpp" />
     <ClInclude Include="src\framework.hpp" />
     <ClInclude Include="include\Macros.hpp" />
     <ClInclude Include="include\Onyxx.Core.hpp" />
-    <ClInclude Include="include\Window.hpp" />
+    <ClInclude Include="include\Window\Window.hpp" />
     <ClInclude Include="src\pch.hpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="src\D3D\PrintHighestFeatureLevel.cpp" />
     <ClCompile Include="src\dllmain.cpp" />
     <ClCompile Include="src\pch.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
